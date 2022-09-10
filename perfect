@@ -1,0 +1,47 @@
+Suppose the number to be check is 6: The user has provided one number that is ‘6’, now we have 
+to think and calculate by which other numbers we can divide ‘6’ and get the remainder as ‘0’. If the 
+remainder is zero, then we can say that ‘6’ is divisible by that number and we can take this number 
+into consideration to get the sum by using some more other numbers. Compile and execute the 
+above C program.
+Sample Input:
+Given Number: 6
+Sample Output:
+Its a Perfect Number 
+Test cases:
+1. 17
+2. 26!
+3. 143
+4. 84.1
+5. -963
+#include<stdio.h>
+#include<conio.h>
+int main()
+{
+ int num,rem,sum=0,i;
+printf("enter a number\n");
+scanf("%d",&num);
+for(i=1;i<num;i++)
+{
+rem=num%i;
+if(rem==0)
+ {
+ sum=sum+i;
+ }
+}
+if(sum==num) 
+ printf("%d is a perfect number");
+else
+ printf("\n%d is not a perfect number");
+getch();
+}
+Testcases:
+1. enter a number:17
+17 is not a perfect number
+2.enter a number:26
+26 is a perfect number
+3.enter a number:143
+ 143 is not a perfect number
+4.enter a number:84.1
+84.1is not a perfect number
+5.enter a number:-963
+-963 is not a perfect number
